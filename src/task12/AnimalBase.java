@@ -5,6 +5,7 @@ import java.io.*;
 import java.util.Scanner;
 
 import static task12.CatService.*;
+import static task12.HomeService.link;
 
 public class AnimalBase {
 
@@ -17,6 +18,9 @@ public class AnimalBase {
 
         CatService catService = new CatService();
         HomeService homeService = new HomeService();
+        FileService fileService = new FileService();
+
+        fileService.creatBasicFile();
 
         while(!commands.equals("exit")){
             System.out.println("\nВ нашей программе доступны следующие команды: " +
@@ -41,7 +45,7 @@ public class AnimalBase {
                     catsList.add(cat.getName()); //добавляем в catsList нужного кота
 
                     //заново создаём пустой питомник и по очереди вписываем всех котов из CatsList
-                    File file = new File(HomeService.link + cat.getHome());
+                    File file = new File(link + cat.getHome());
                     if(file.exists()){
                         try(FileWriter fw = new FileWriter(file)){
                             for (String s : catsList) {
@@ -70,7 +74,7 @@ public class AnimalBase {
                     catService.addAtCatsList(cat1); //читаем существующий питомник и заново добавляем всех котов в пустой СatsList
 
                     //Создаём пустой питомник и заново заполняем его котами из CatsList, пропуская введёного пользователем кота
-                    try(FileWriter fw = new FileWriter(HomeService.link + cat1.getHome())){
+                    try(FileWriter fw = new FileWriter(link + cat1.getHome())){
                         for (String s : catsList) {
                             if (cat1.getName().equals(s))
                                 continue;
@@ -89,8 +93,8 @@ public class AnimalBase {
                     catService.relocateCats(cat2.getHome(), cat3.getHome());//Читаем всех котов из 1-ого и 2-ого файла и добавляем их catsListRelocate
 
                     // Заносим в пустой питомник всех котов из catsListRelocates (коты из 1-ого + 2-ого файла)
-                    try (FileWriter fw = new FileWriter(HomeService.link + cat3.getHome());
-                         FileWriter fw1 = new FileWriter(HomeService.link + cat2.getHome())) {
+                    try (FileWriter fw = new FileWriter(link + cat3.getHome());
+                         FileWriter fw1 = new FileWriter(link + cat2.getHome())) {
                         for (String s : catsListRelocate) {
                             fw.write(s + " ");
                         }
