@@ -1,13 +1,12 @@
 package task12;
 
-import java.io.*;
+import java.io.Serializable;
 
-public class Cats implements Serializable {
-
+public class Cat implements Serializable {
     private String name;
     private String home;
 
-    public Cats(String name, String home){
+    public Cat(String name, String home) {
         this.name = name;
         this.home = home;
     }
@@ -27,4 +26,5 @@ public class Cats implements Serializable {
     public void setHome(String home) {
         this.home = home;
     }
+
 }
