@@ -1,77 +1,51 @@
 package task12;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CatService {
 
-    static final String link2 = "src/task12/resources/allCats/";
+    //
+    public void movingCat(Cat cat) {
 
-    public static ArrayList<String> catsList = new ArrayList<>();
-    public static ArrayList<String> catsListRelocate = new ArrayList<>();
-
-    public void addAtCatsList(Cat cat) {
-
-        try (Scanner scanner = new Scanner(new File(HomeService.link + cat.getHome()))) {
-            catsList.clear();
-            while (scanner.hasNext()) {
-                String cat1 = scanner.next();
-                catsList.add(cat1);
+        //Убирет кота из списка catsList
+        if (!DataBase.homesList.contains(cat.getName()) || !DataBase.catsList.contains(cat)) {
+            for (Cat o : DataBase.catsList) {
+                if (o.equals(cat)) {
+                    DataBase.catsList.remove(o);
+                }
             }
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+        } else {
+            System.out.println("Такого кота или питоника не существует!");
         }
     }
 
-    public void relocateCats(String source, String target) {
-        final String sourceWay = HomeService.link + source;
-        final String targetWay = HomeService.link + target;
-
-        File sourceFile = new File(sourceWay);
-        File targetFile = new File(targetWay);
-
-        if (sourceFile.exists() && targetFile.exists()) {
-            try (Scanner scanner_target = new Scanner(targetFile);
-                 Scanner scanner_source = new Scanner(sourceFile)) {
-                while (scanner_target.hasNext()) {
-                    String cat = scanner_target.next();
-                    catsListRelocate.add(cat);
+    //Переносит котов из одного питомника в другой
+    public void relocateCats(String homeSource, String homeTarget) {
+        if (!DataBase.homesList.contains(homeSource) || !DataBase.homesList.contains(homeTarget)) {
+            for (int i = 0; i < DataBase.catsList.size(); i++) {
+                if (homeSource.equalsIgnoreCase(DataBase.catsList.get(i).getHome())) {
+                    DataBase.catsList.get(i).setName(homeTarget);
                 }
-                while (scanner_source.hasNext()) {
-                    String cat = scanner_source.next();
-                    catsListRelocate.add(cat);
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
             }
+        } else {
+            System.out.println("Одного из питомников не существует");
         }
-        else
-            System.out.println("Одного из этих питомников нет в списке");
     }
 
-    public void creatListOfAllCats() {
+    //Выводит всех котов из списка catsList
+    public void printAllCats(){
+        for(Cat o: DataBase.catsList){
+            System.out.print(o.getName() + " ");
+        }
+    }
 
-        ArrayList<String> catsCreatList = new ArrayList<>();
-
-        File resources = new File(HomeService.link);
-        File[] listOfFiles = resources.listFiles();
-        for (File file : listOfFiles) {
-
-            String homeName = file.getName();
-
-            try (Scanner scanner = new Scanner(new File(HomeService.link + homeName))) {
-                while (scanner.hasNext()) {
-                    String cat = scanner.next();
-                    catsCreatList.add(cat);
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
+    //Выводит информаицю об одном из объектов Cat
+    public void printCatInfo(String name){
+        for(Cat o: DataBase.catsList){
+            if(o.getName().equalsIgnoreCase(name)) {
+                System.out.println("Моё имя " + o.getName() + ". Я живу в " + o.getHome());
             }
         }
-        for (String s : catsCreatList)
-            System.out.print(s + " ");
-
     }
 }
