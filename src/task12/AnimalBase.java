@@ -1,6 +1,5 @@
 package task12;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class AnimalBase {
@@ -10,25 +9,25 @@ public class AnimalBase {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Добро пожаловать в наш приют для котикот :В");
-        String commands = "";
+        String command = "";
 
         HomeService homeService = new HomeService();
         CatService catService = new CatService();
 
-        while(!commands.equals("exit")){
+        DataBase dataBase = DataBase.getDataBase();
+
+        do {
             System.out.println("\nВ нашей программе доступны следующие команды: " +
                     "\n 1. Добавить новый питомник. \n 2. Добавить нового кота." +
                     "\n 3. Удалить кота. \n 4. Переселить котов из одного питомника в другой." +
                     "\n 5. Посмотреть информацию о всех котах." +
                     "\n 6. Посмотреть информацию о котах в конкретном питомнике." +
                     "\n 7. Посммотреть информацию о конкретном коте." +
-                    "\n 8. Посммотреть информацию о всех питомниках." );
+                    "\n 8. Посммотреть информацию о всех питомниках.");
 
-            commands = sc.next();
+            command = sc.next();
 
-            DataBase.getProgramLogger();
-
-            switch (commands){
+            switch (command) {
                 case "1":
                     System.out.println("Введите название нового питомника");
                     homeService.creatNewHome(sc.next());
@@ -36,20 +35,15 @@ public class AnimalBase {
 
                 case "2":
                     System.out.println("Введите имя котика и название питомника, в который хотите его добавить");
-                    Cat cat = new Cat(sc.next(), sc.next());
-
-                    //Добавляет нового кота в список catsList
-                    if (DataBase.homesList.contains(cat.getHome())) {
-                        DataBase.catsList.add(cat);
-                    } else {
-                        System.out.println("Такой питомника не существует");
-                    }
+                    Cat cat = catService.getCat(sc.next(), sc.next());
+                    catService.addNewCat(cat);
                     break;
 
                 case "3":
                     System.out.println("Введите имя кота и питомник, откуда он уехал");
-                    Cat cat1 = new Cat(sc.next(), sc.next());
+                    Cat cat1 = catService.getCat(sc.next(), sc.next());
                     catService.movingCat(cat1);
+
                     break;
 
                 case "4":
@@ -83,7 +77,7 @@ public class AnimalBase {
                     break;
 
                 case "exit":
-                    DataBase.getProgramLogger().serialization();
+                    dataBase.serializeCats();
                     System.out.println("Программа завершает свою работу. Ждём ваш позже");
                     break;
                 default:
@@ -91,7 +85,7 @@ public class AnimalBase {
                     break;
             }
 
-        }
+        } while (!command.equals("exit"));
 
     }
 

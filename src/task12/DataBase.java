@@ -2,63 +2,66 @@ package task12;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 
-public class DataBase implements Serializable{
+import static task12.FileCreator.creatFile;
+
+public class DataBase implements Serializable {
+
     @Serial
     private static final long serialVersionUID = 1L;
-
+    private static List<Cat> catList = new ArrayList<>();
+    private static HashSet<String> homeList = new HashSet<>();
     private static DataBase dataBase;
-    private static String link = "D:\\Код\\Itclopedia\\12\\Anton_Mitr\\src\\task12\\resources\\cats.bin";
+    private static final String LINK = "src/task12/resources/cats.bin";
 
-    protected static ArrayList<Cat> catsList = new ArrayList<Cat>();
-    protected static ArrayList<String> homesList = new ArrayList<String>();
+    private DataBase() {
+        deserializeCats();
+    }
 
-    public static synchronized DataBase getProgramLogger(){ // добавляем "synchronized" для работы в многопоточной среде
-        if(dataBase == null){
-            //Если нет папки с котами, то создаём её
-            File file = new File(link);
-            if(!file.exists()){
-                try {
-                    file.createNewFile();
-                } catch (IOException ex) {
-                    System.out.println(ex.getMessage());
-                }
-            }
-            //////////////////////////////////////////
-
+    public static synchronized DataBase getDataBase() { // добавляем "synchronized" для работы в многопоточной среде
+        if (dataBase == null) {
+            creatFile(LINK);
             dataBase = new DataBase();
         }
         return dataBase;
     }
 
-    private DataBase(){
-        try(FileInputStream fis = new FileInputStream(link);
-            ObjectInputStream ois = new ObjectInputStream(fis)){
-            while(true){
-                try {
-                    Cat cat = (Cat) ois.readObject();
-                    catsList.add(cat);
-                    if(!homesList.contains(cat.getHome())) {
-                        homesList.add(cat.getHome());
-                    }
-                } catch (EOFException e) {
-                    break;
-                }
+    public void serializeCats() {
+        try (FileOutputStream fos = new FileOutputStream(LINK);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            for (Cat cat : catList) {
+                oos.writeObject(cat);
             }
-        }catch (IOException | ClassNotFoundException ex){
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
 
-    public void serialization(){
-        try (FileOutputStream fos = new FileOutputStream(link);
-            ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-                for (Cat cat : catsList) {
-                    oos.writeObject(cat);
+    private void deserializeCats(){
+        try (FileInputStream fis = new FileInputStream(LINK);
+             ObjectInputStream ois = new ObjectInputStream(fis)) {
+            while (true) {
+                try {
+                    Cat cat = (Cat) ois.readObject();
+                    catList.add(cat);
+                    homeList.add(cat.getHome());
+                } catch (EOFException e) {
+                    break;
                 }
-        } catch (IOException ex) {
+            }
+        } catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
+    }
+
+    public List<Cat> getCatList(){
+        return catList;
+    }
+
+    public HashSet<String> getHomeList(){
+        return homeList;
     }
 
 }
