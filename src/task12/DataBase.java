@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import static task12.FileCreator.creatFile;
-
 public class DataBase implements Serializable {
 
     @Serial
@@ -47,11 +45,20 @@ public class DataBase implements Serializable {
                     Cat cat = (Cat) ois.readObject();
                     catList.add(cat);
                     homeList.add(cat.getHome());
-                } catch (EOFException e) {
+                } catch (EOFException | ClassNotFoundException e) {
                     break;
                 }
             }
-        } catch (IOException | ClassNotFoundException ex) {
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+     private static void creatFile(String LINK) {
+        File file = new File(LINK);
+        try {
+            file.createNewFile();
+        } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
