@@ -1,77 +1,67 @@
 package task12;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.HashSet;
+import java.util.List;
 
 public class CatService {
 
-    static final String link2 = "src/task12/resources/allCats/";
+    DataBase dataBase = DataBase.getDataBase();
 
-    public static ArrayList<String> catsList = new ArrayList<>();
-    public static ArrayList<String> catsListRelocate = new ArrayList<>();
+    private List<Cat> catList = dataBase.getCatList();
+    private HashSet<String> homeList = dataBase.getHomeList();
 
-    public void addAtCatsList(Cat cat) {
-
-        try (Scanner scanner = new Scanner(new File(HomeService.link + cat.getHome()))) {
-            catsList.clear();
-            while (scanner.hasNext()) {
-                String cat1 = scanner.next();
-                catsList.add(cat1);
+    public void movingCat(Cat cat) {
+        //Убирет кота из списка catsList
+        if ((homeList.contains(cat.getHome())) && (catList.contains(cat))) {
+            for (Cat cat1 : catList) {
+                if (cat1.equals(cat) ) {
+                    catList.remove(cat1);
+                    break;
+                }
             }
-        } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+        } else {
+            System.out.println("Такого кота или питоника не существует!");
         }
     }
 
-    public void relocateCats(String source, String target) {
-        final String sourceWay = HomeService.link + source;
-        final String targetWay = HomeService.link + target;
-
-        File sourceFile = new File(sourceWay);
-        File targetFile = new File(targetWay);
-
-        if (sourceFile.exists() && targetFile.exists()) {
-            try (Scanner scanner_target = new Scanner(targetFile);
-                 Scanner scanner_source = new Scanner(sourceFile)) {
-                while (scanner_target.hasNext()) {
-                    String cat = scanner_target.next();
-                    catsListRelocate.add(cat);
+    //Переносит котов из одного питомника в другой
+    public void relocateCats(String homeSource, String homeTarget) {
+        if (homeList.contains(homeSource) || homeList.contains(homeTarget)) {
+            for (Cat cat : catList) {
+                if (homeSource.equalsIgnoreCase(cat.getHome())) {
+                    cat.setHome(homeTarget);
                 }
-                while (scanner_source.hasNext()) {
-                    String cat = scanner_source.next();
-                    catsListRelocate.add(cat);
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
             }
+        } else {
+            System.out.println("Одного из питомников не существует");
         }
-        else
-            System.out.println("Одного из этих питомников нет в списке");
     }
 
-    public void creatListOfAllCats() {
+    //Выводит всех котов из списка catsList
+    public void printAllCats() {
+        for (Cat cat : catList) {
+            System.out.print(cat.getName() + " ");
+        }
+    }
 
-        ArrayList<String> catsCreatList = new ArrayList<>();
-
-        File resources = new File(HomeService.link);
-        File[] listOfFiles = resources.listFiles();
-        for (File file : listOfFiles) {
-
-            String homeName = file.getName();
-
-            try (Scanner scanner = new Scanner(new File(HomeService.link + homeName))) {
-                while (scanner.hasNext()) {
-                    String cat = scanner.next();
-                    catsCreatList.add(cat);
-                }
-            } catch (IOException ex) {
-                System.out.println(ex.getMessage());
+    //Выводит информаицю об одном из объектов Cat
+    public void printCatInfo(String name) {
+        for (Cat cat : catList) {
+            if (cat.getName().equalsIgnoreCase(name)) {
+                System.out.println("Моё имя " + cat.getName() + ". Я живу в " + cat.getHome());
             }
         }
-        for (String s : catsCreatList)
-            System.out.print(s + " ");
+    }
 
+    public void addNewCat(Cat cat) {
+        if (homeList.contains(cat.getHome())) {
+            catList.add(cat);
+        } else {
+            System.out.println("Такой питомника не существует");
+        }
+    }
+
+    public Cat getCat(String catName, String catHome){
+        return new Cat(catName, catHome);
     }
 }
