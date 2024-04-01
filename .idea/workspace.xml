@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36efb6b4-41d1-4395-8e76-c0064bc558b4" name="Changes" comment="add task_12" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="task_12" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2dDsSvwWHGDgWAkkZjiYkobDR7j" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AnimalBase.executor": "Run",
+    "Application.AnimalBase2.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Код/Itclopedia/12/Anton_Mitr/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src\task13\config" />
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src\task12\config" />
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src\task12\controller" />
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src\task12\resources" />
+      <recent name="D:\Код\Itclopedia\12\Anton_Mitr\src\task12" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="task12" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36efb6b4-41d1-4395-8e76-c0064bc558b4" name="Changes" comment="" />
+      <created>1709553986939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709553986939</updated>
+      <workItem from="1709553987995" duration="6940000" />
+      <workItem from="1710255594068" duration="628000" />
+      <workItem from="1710256255111" duration="345000" />
+      <workItem from="1710256803221" duration="15381000" />
+      <workItem from="1710341825723" duration="6351000" />
+      <workItem from="1710427821559" duration="622000" />
+      <workItem from="1710604916689" duration="625000" />
+      <workItem from="1710762614574" duration="1188000" />
+      <workItem from="1710773761286" duration="23414000" />
+      <workItem from="1710828688970" duration="1471000" />
+      <workItem from="1710835943737" duration="4670000" />
+      <workItem from="1710843007938" duration="2913000" />
+      <workItem from="1710854786798" duration="597000" />
+      <workItem from="1710935610675" duration="13106000" />
+      <workItem from="1710970802280" duration="10000" />
+      <workItem from="1711043056146" duration="4283000" />
+      <workItem from="1711364518597" duration="10270000" />
+      <workItem from="1711466202592" duration="8430000" />
+      <workItem from="1711542698584" duration="3676000" />
+      <workItem from="1711546404420" duration="246000" />
+      <workItem from="1711546662343" duration="1531000" />
+      <workItem from="1711649168503" duration="789000" />
+      <workItem from="1711730858823" duration="813000" />
+      <workItem from="1711993633944" duration="202000" />
+      <workItem from="1711993909922" duration="76000" />
+      <workItem from="1711993998451" duration="352000" />
+      <workItem from="1711994392691" duration="255000" />
+    </task>
+    <task id="LOCAL-00001" summary="add (.gitignore)">
+      <option name="closed" value="true" />
+      <created>1709554177623</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709554177624</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1709561038249</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709561038249</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1709561097884</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709561097884</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710358278777</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710358278777</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710358417062</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710358417062</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710359351817</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710359351817</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710854886009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710854886009</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710855051008</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710855051008</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710949117396</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710949117396</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1710949213385</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710949213385</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1711546204976</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711546204976</updated>
+    </task>
+    <task id="LOCAL-00012" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1711546252966</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711546252966</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1711993820105</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711993820105</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add task_12">
+      <option name="closed" value="true" />
+      <created>1711994579047</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1711994579047</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="task_13" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add (.gitignore)" />
+    <MESSAGE value="add task_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="add task_12" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

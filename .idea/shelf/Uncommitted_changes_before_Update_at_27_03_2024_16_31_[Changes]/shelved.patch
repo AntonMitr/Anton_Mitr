@@ -1,0 +1,192 @@
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/Anton_Mitr.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Anton_Mitr.iml b/.idea/Anton_Mitr.iml
+deleted file mode 100644
+--- a/.idea/Anton_Mitr.iml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
+-  </component>
+-</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+deleted file mode 100644
+--- a/.idea/vcs.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+deleted file mode 100644
+--- a/.idea/modules.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/.idea/Anton_Mitr.iml" filepath="$PROJECT_DIR$/.idea/Anton_Mitr.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+deleted file mode 100644
+--- a/.idea/.gitignore	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,8 +0,0 @@
+-# Default ignored files
+-/shelf/
+-/workspace.xml
+-# Editor-based HTTP Client requests
+-/httpRequests/
+-# Datasource local storage ignored files
+-/dataSources/
+-/dataSources.local.xml
+Index: src/task12/FileCreator.java
+===================================================================
+diff --git a/src/task12/FileCreator.java b/src/task12/FileCreator.java
+deleted file mode 100644
+--- a/src/task12/FileCreator.java	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,16 +0,0 @@
+-package task12;
+-
+-import java.io.File;
+-import java.io.IOException;
+-
+-public final class FileCreator {
+-
+-    public static void creatFile(String LINK) {
+-        File file = new File(LINK);
+-        try {
+-            file.createNewFile();
+-        } catch (IOException ex) {
+-            System.out.println(ex.getMessage());
+-        }
+-    }
+-}
+Index: .idea/libraries/KotlinJavaRuntime.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/KotlinJavaRuntime.xml b/.idea/libraries/KotlinJavaRuntime.xml
+deleted file mode 100644
+--- a/.idea/libraries/KotlinJavaRuntime.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,23 +0,0 @@
+-<component name="libraryTable">
+-  <library name="KotlinJavaRuntime" type="repository">
+-    <properties maven-id="org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.22" />
+-    <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.22/kotlin-stdlib-jdk8-1.9.22.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.22/kotlin-stdlib-jdk7-1.9.22.jar!/" />
+-    </CLASSES>
+-    <JAVADOC>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.22/kotlin-stdlib-jdk8-1.9.22-javadoc.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22-javadoc.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0-javadoc.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.22/kotlin-stdlib-jdk7-1.9.22-javadoc.jar!/" />
+-    </JAVADOC>
+-    <SOURCES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.9.22/kotlin-stdlib-jdk8-1.9.22-sources.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib/1.9.22/kotlin-stdlib-1.9.22-sources.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/13.0/annotations-13.0-sources.jar!/" />
+-      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.9.22/kotlin-stdlib-jdk7-1.9.22-sources.jar!/" />
+-    </SOURCES>
+-  </library>
+-</component>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+deleted file mode 100644
+--- a/.idea/inspectionProfiles/Project_Default.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,13 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="EmptyTryBlock" enabled="false" level="WARNING" enabled_by_default="false" />
+-    <inspection_tool class="IgnoreResultOfCall" enabled="false" level="WARNING" enabled_by_default="false">
+-      <option name="m_reportAllNonLibraryCalls" value="false" />
+-      <option name="callCheckString" value="java.io.File,.*,java.io.InputStream,read|skip|available|markSupported,java.io.Reader,read|skip|ready|markSupported,java.lang.AbstractStringBuilder,capacity|codePointAt|codePointBefore|codePointCount|indexOf|lastIndexOf|offsetByCodePoints|substring|subSequence,java.lang.Boolean,.*,java.lang.Byte,.*,java.lang.Character,.*,java.lang.Double,.*,java.lang.Float,.*,java.lang.Integer,.*,java.lang.Long,.*,java.lang.Math,.*,java.lang.Object,equals|hashCode|toString,java.lang.Short,.*,java.lang.StrictMath,.*,java.lang.String,.*,java.lang.Thread,interrupted,java.math.BigDecimal,.*,java.math.BigInteger,.*,java.net.InetAddress,.*,java.net.URI,.*,java.nio.channels.AsynchronousChannelGroup,.*,java.nio.channels.Channel,isOpen,java.nio.channels.FileChannel,open|map|lock|tryLock|write,java.nio.channels.ScatteringByteChannel,read,java.nio.channels.SocketChannel,open|socket|isConnected|isConnectionPending,java.util.Arrays,.*,java.util.Collections,(?!addAll).*,java.util.List,of,java.util.Map,of|ofEntries|entry,java.util.Set,of,java.util.UUID,.*,java.util.concurrent.BlockingQueue,offer|remove,java.util.concurrent.CountDownLatch,await|getCount,java.util.concurrent.ExecutorService,awaitTermination|isShutdown|isTerminated,java.util.concurrent.ForkJoinPool,awaitQuiescence,java.util.concurrent.Semaphore,tryAcquire|availablePermits|isFair|hasQueuedThreads|getQueueLength|getQueuedThreads,java.util.concurrent.locks.Condition,await|awaitNanos|awaitUntil,java.util.concurrent.locks.Lock,tryLock|newCondition,java.util.regex.Matcher,pattern|toMatchResult|start|end|group|groupCount|matches|find|lookingAt|quoteReplacement|replaceAll|replaceFirst|regionStart|regionEnd|hasTransparentBounds|hasAnchoringBounds|hitEnd|requireEnd,java.util.regex.Pattern,.*,java.util.stream.BaseStream,.*,java.util.stream.DoubleStream,.*,java.util.stream.IntStream,.*,java.util.stream.LongStream,.*,java.util.stream.Stream,.*" />
+-    </inspection_tool>
+-    <inspection_tool class="SuspiciousMethodCalls" enabled="false" level="WARNING" enabled_by_default="false">
+-      <option name="REPORT_CONVERTIBLE_METHOD_CALLS" value="true" />
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: .idea/kotlinc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/kotlinc.xml b/.idea/kotlinc.xml
+deleted file mode 100644
+--- a/.idea/kotlinc.xml	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
++++ /dev/null	(revision 33e3c9ff527c68ffed89523844b738a9fe64d99c)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Kotlin2JvmCompilerArguments">
+-    <option name="jvmTarget" value="1.8" />
+-  </component>
+-</project>
+\ No newline at end of file
