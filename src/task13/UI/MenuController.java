@@ -21,8 +21,8 @@ public class MenuController {
             navigator.printMenu();
 
             command = sc.next();
-            navigator.navigate(Integer.parseInt(command)-1);
-        } while (!command.equalsIgnoreCase("12"));
+            navigator.navigate(command);
+        } while (!command.equalsIgnoreCase("exit"));
 
 
     }

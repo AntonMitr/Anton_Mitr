@@ -13,7 +13,7 @@ public enum EnumCommands {
     CHANGE_CAT_INFO("9. Редактировать информацию о коте."),
     CHANGE_HOME_INFO("10. Редактировать информацию о питомнике."),
     DEL_HOME_AND_REPLACE_CATS("11. Удалить питомник и перенести всех котов в другой."),
-    EXIT("12. Выйти из программы");
+    EXIT("exit. Выйти из программы");
 
     private String menuCommand;
 

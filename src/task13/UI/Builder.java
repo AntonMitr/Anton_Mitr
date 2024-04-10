@@ -36,7 +36,6 @@ public class Builder {
 
     public void buildMenu() {
 
-
         IAction iAction = () -> {
             Scanner sc = new Scanner(System.in);
 
@@ -165,12 +164,6 @@ public class Builder {
             }
         };
         rootMenuItems.add(new MenuItem(EnumCommands.DEL_HOME_AND_REPLACE_CATS.getEnumCommand(), iAction));
-
-        iAction = () -> {
-            dataBase.serializeCats();
-            System.out.println("Программа завершает свою работу. Ждём ваш позже");
-        };
-        rootMenuItems.add(new MenuItem(EnumCommands.EXIT.getEnumCommand(), iAction));
 
 
         rootMenu.setMenuItems(rootMenuItems);

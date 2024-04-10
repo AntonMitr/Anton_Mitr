@@ -1,5 +1,7 @@
 package task13.UI;
 
+import task13.model.DataBase;
+
 public class Navigator {
 
     private Menu currentMenu;
@@ -16,7 +18,13 @@ public class Navigator {
         }
     }
 
-    public void navigate(int command) {
-        currentMenu.getMenuItems().get(command).doAction();
+    public void navigate(String command) {
+        if(command.equalsIgnoreCase("exit")){
+            DataBase dataBase = DataBase.getDataBase();
+            dataBase.serializeCats();
+            System.out.println("Программа завершает свою работу. Ждём ваш позже");
+        } else {
+            currentMenu.getMenuItems().get(Integer.parseInt(command)-1).doAction();
+        }
     }
 }
