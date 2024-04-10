@@ -6,30 +6,30 @@ import java.util.Properties;
 
 public class Config {
 
-    private Boolean CAN_DELETE_HOME;
-    private Integer MAX_CATS_AT_HOME;
+    private Boolean canDeleteHome;
+    private Integer maxCatsAtHome;
 
     public Config() {
-        InitConfigConst();
+        initConfigConst();
     }
 
-    private void InitConfigConst() {
+    private void initConfigConst() {
         Properties property = new Properties();
 
         try (FileInputStream fis = new FileInputStream("src/task13/config/config.properties")) {
             property.load(fis);
-            CAN_DELETE_HOME = Boolean.valueOf(property.getProperty("CAN_DELETE_HOME"));
-            MAX_CATS_AT_HOME = Integer.valueOf(property.getProperty("MAX_CATS_AT_HOME"));
+            canDeleteHome = Boolean.valueOf(property.getProperty("CAN_DELETE_HOME"));
+            maxCatsAtHome = Integer.valueOf(property.getProperty("MAX_CATS_AT_HOME"));
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
         }
     }
 
     public Boolean getCanDeleteHome() {
-        return CAN_DELETE_HOME;
+        return canDeleteHome;
     }
 
     public Integer getMaxCatsAtHome() {
-        return MAX_CATS_AT_HOME;
+        return maxCatsAtHome;
     }
 }
