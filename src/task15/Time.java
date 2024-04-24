@@ -2,9 +2,7 @@ package task15;
 
 import java.util.Date;
 import java.util.Scanner;
-
-import static java.lang.Thread.currentThread;
-import static java.util.concurrent.TimeUnit.SECONDS;
+import java.util.concurrent.TimeUnit;
 
 public class Time {
 
@@ -14,12 +12,12 @@ public class Time {
         Scanner sc = new Scanner(System.in);
         Thread thread = new Thread(() -> {
             n = sc.nextInt();
-            while (!currentThread().isInterrupted()) {
+            while (!Thread.currentThread().isInterrupted()) {
                 Date time = new Date();
                 String thisTime = "%d:%d:%d".formatted(time.getHours(), time.getMinutes(), time.getSeconds());
                 System.out.println(thisTime);
                 try {
-                    SECONDS.sleep(n);
+                    TimeUnit.SECONDS.sleep(n);
                 } catch (InterruptedException interruptedException) {
                     System.out.println(interruptedException.getMessage());
                 }

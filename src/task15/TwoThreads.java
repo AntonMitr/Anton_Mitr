@@ -1,8 +1,8 @@
 package task15;
 
-import static java.lang.System.out;
-import static java.lang.Thread.currentThread;
-import static java.util.concurrent.TimeUnit.SECONDS;
+import java.util.concurrent.TimeUnit;
+
+import static java.util.concurrent.TimeUnit.*;
 
 public class TwoThreads {
 
@@ -10,14 +10,14 @@ public class TwoThreads {
         Thread firstThread = new Thread();
         Thread secondThread = new Thread();
         Thread mainThread = new Thread(() -> {
-            while (!currentThread().isInterrupted()) {
+            while (!Thread.currentThread().isInterrupted()) {
                 try {
                     SECONDS.sleep(1);
-                    out.println(firstThread.getName());
+                    System.out.println(firstThread.getName());
                     SECONDS.sleep(1);
-                    out.println(secondThread.getName() + "\n");
+                    System.out.println(secondThread.getName() + "\n");
                 } catch (InterruptedException interruptedException) {
-                    out.println(interruptedException.getMessage());
+                    System.out.println(interruptedException.getMessage());
                 }
             }
         });
