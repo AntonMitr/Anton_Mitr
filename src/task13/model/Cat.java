@@ -1,4 +1,4 @@
-package task12;
+package task13.model;
 
 import java.io.Serial;
 import java.io.Serializable;
