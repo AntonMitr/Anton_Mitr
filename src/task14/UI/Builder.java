@@ -1,9 +1,7 @@
 package task14.UI;
 
-import task14.annotation.CatServiceDI;
+import task14.annotation.DIAnnotation;
 import task14.annotation.DIAnnotationService;
-import task14.annotation.HomeServiceDI;
-import task14.annotation.MenuDI;
 import task14.controller.CatService;
 import task14.controller.HomeService;
 
@@ -12,11 +10,11 @@ import java.util.ArrayList;
 
 public class Builder {
 
-    @MenuDI
+    @DIAnnotation
     private Menu rootMenu;
-    @HomeServiceDI
+    @DIAnnotation
     private HomeService homeService;
-    @CatServiceDI
+    @DIAnnotation
     private CatService catService;
 
     public Builder() {

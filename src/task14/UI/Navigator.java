@@ -1,13 +1,13 @@
 package task14.UI;
 
-import task14.annotation.BuilderDI;
+import task14.annotation.DIAnnotation;
 import task14.annotation.DIAnnotationService;
 import task14.model.DataBase;
 
 public class Navigator {
 
     private final Menu currentMenu;
-    @BuilderDI
+    @DIAnnotation
     private Builder builder;
 
     public Navigator() {

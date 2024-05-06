@@ -1,13 +1,13 @@
 package task14.UI;
 
+import task14.annotation.DIAnnotation;
 import task14.annotation.DIAnnotationService;
-import task14.annotation.NavigatorDI;
 
 import java.util.Scanner;
 
 public class MenuController {
 
-    @NavigatorDI
+    @DIAnnotation
     private Navigator navigator;
 
     public MenuController() {

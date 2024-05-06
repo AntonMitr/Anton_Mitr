@@ -20,7 +20,7 @@ public class ConfigAnalizator {
             if (field.isAnnotationPresent(ConfigProperty.class)) {
                 field.setAccessible(true);
                 ConfigProperty configProperty = field.getAnnotation(ConfigProperty.class);
-                try (FileInputStream fis = new FileInputStream("src/task14/config/config.properties")) {
+                try (FileInputStream fis = new FileInputStream(configProperty.configFileName())) {
                     property.load(fis);
                     field.set(config, ConfigConvert.convertValue(property.getProperty(configProperty.propertyName()), configProperty.type()));
                 } catch (final IOException | IllegalArgumentException | IllegalAccessException ex) {

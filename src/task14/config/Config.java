@@ -3,9 +3,9 @@ package task14.config;
 public class Config {
 
     @ConfigProperty(propertyName = "CAN_DELETE_HOME", type = boolean.class)
-    private boolean CAN_DELETE_HOME;
+    private boolean canDeleteHome;
     @ConfigProperty(propertyName = "MAX_CATS_AT_HOME", type = int.class)
-    private int MAX_CATS_AT_HOME;
+    private int maxCatsAtHome;
 
     public Config() {
         ConfigAnalizator configAnalizator = new ConfigAnalizator();
@@ -13,10 +13,10 @@ public class Config {
     }
 
     public Boolean getCanDeleteHome() {
-        return CAN_DELETE_HOME;
+        return canDeleteHome;
     }
 
     public Integer getMaxCatsAtHome() {
-        return MAX_CATS_AT_HOME;
+        return maxCatsAtHome;
     }
 }
