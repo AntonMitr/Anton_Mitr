@@ -15,7 +15,7 @@ public enum EnumCommands {
     DEL_HOME_AND_REPLACE_CATS("Удалить питомник и перенести всех котов в другой."),
     EXIT("exit. Выйти из программы");
 
-    private String menuCommand;
+    private final String menuCommand;
 
     EnumCommands(String menuCommand) {
         this.menuCommand = menuCommand;
@@ -24,4 +24,5 @@ public enum EnumCommands {
     public String getEnumCommand() {
         return menuCommand;
     }
+
 }

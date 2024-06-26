@@ -1,5 +1,7 @@
 package task14.controller;
 
+import task14.annotation.DIAnnotation;
+import task14.annotation.DIAnnotationService;
 import task14.config.Config;
 import task14.model.Cat;
 import task14.model.DataBase;
@@ -9,8 +11,13 @@ import java.util.Scanner;
 public class CatService {
 
     private final DataBase dataBase = DataBase.getDataBase();
-    private final Config config = new Config();
+    @DIAnnotation
+    private Config config;
     private Scanner sc = new Scanner(System.in);
+
+    public CatService() {
+        DIAnnotationService.processingDI(this);
+    }
 
     public void deleteCat() {
         //Убирет кота из списка catsList
@@ -135,4 +142,5 @@ public class CatService {
     public Cat getCat(String catName, String catHome) {
         return new Cat(catName, catHome);
     }
+
 }

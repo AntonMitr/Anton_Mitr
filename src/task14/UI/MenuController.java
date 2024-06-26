@@ -24,7 +24,6 @@ public class MenuController {
             command = sc.next();
             navigator.navigate(command);
         } while (!command.equalsIgnoreCase("exit"));
-
-
     }
+
 }

@@ -1,5 +1,7 @@
 package task14.controller;
 
+import task14.annotation.DIAnnotation;
+import task14.annotation.DIAnnotationService;
 import task14.config.Config;
 import task14.model.Cat;
 import task14.model.DataBase;
@@ -8,10 +10,16 @@ import java.util.Scanner;
 
 public class HomeService {
 
-    private final Config config = new Config();
+    @DIAnnotation
+    private Config config;
     private final DataBase dataBase = DataBase.getDataBase();
-    private final CatService catService = new CatService();
+    @DIAnnotation
+    private CatService catService;
     private Scanner sc = new Scanner(System.in);
+
+    public HomeService() {
+        DIAnnotationService.processingDI(this);
+    }
 
     //Добавляем в список(homesList) новый дом
     public void creatNewHome() {
@@ -26,7 +34,6 @@ public class HomeService {
 
     //Выводит на экран список всех котов из x питомника
     public void printCatsAtHome() {
-
         System.out.println("Введите название питомника про который хотите узнать больше");
         String home = sc.next();
         System.out.println("Все коты проживающие в питомнике: ");
@@ -46,7 +53,6 @@ public class HomeService {
     }
 
     public void editHomeInfo() {
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Введите название питомника, информацию о котором хотите изменить");
@@ -66,7 +72,6 @@ public class HomeService {
     }
 
     public void deleteHome() {
-
         System.out.println("Введите название питомника, который будет удалён");
         String oldHome = sc.next();
 
@@ -84,4 +89,5 @@ public class HomeService {
             System.out.println("Извинте, но питомник не может содержать больше " + config.getMaxCatsAtHome() + " котов. Операция отменена.");
         }
     }
+
 }

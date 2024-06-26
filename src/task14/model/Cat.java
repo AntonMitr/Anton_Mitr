@@ -45,4 +45,9 @@ public class Cat implements Serializable {
         Cat cat = (Cat) obj;
         return ((name.equals(cat.getName())) && (home.equals(cat.getHome())));
     }
+
+    @Override
+    public int hashCode(){
+        return name.hashCode() + home.hashCode();
+    }
 }

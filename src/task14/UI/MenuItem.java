@@ -1,5 +1,7 @@
 package task14.UI;
 
+import task14.annotation.DIAnnotation;
+
 public class MenuItem {
 
     private String title;
@@ -26,4 +28,5 @@ public class MenuItem {
     public void doAction() {
         iAction.execute();
     }
+
 }

@@ -6,7 +6,8 @@ import task14.model.DataBase;
 
 public class Navigator {
 
-    private final Menu currentMenu;
+    @DIAnnotation
+    private Menu currentMenu;
     @DIAnnotation
     private Builder builder;
 
@@ -38,4 +39,5 @@ public class Navigator {
             System.out.println("Не правильная команда!!!");
         }
     }
+
 }

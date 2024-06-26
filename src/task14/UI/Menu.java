@@ -25,4 +25,5 @@ public class Menu {
     public void setMenuItems(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
+
 }

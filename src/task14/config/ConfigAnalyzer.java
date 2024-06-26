@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.util.Properties;
 
-public class ConfigAnalizator {
+public class ConfigAnalyzer {
 
     private final Properties property;
 
-    public ConfigAnalizator() {
+    public ConfigAnalyzer() {
         property = new Properties();
     }
 
@@ -30,4 +30,5 @@ public class ConfigAnalizator {
             }
         }
     }
+
 }

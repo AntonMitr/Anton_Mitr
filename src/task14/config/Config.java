@@ -8,8 +8,8 @@ public class Config {
     private int maxCatsAtHome;
 
     public Config() {
-        ConfigAnalizator configAnalizator = new ConfigAnalizator();
-        configAnalizator.analize(this);
+        ConfigAnalyzer сonfigAnalyzer = new ConfigAnalyzer();
+        сonfigAnalyzer.analize(this);
     }
 
     public Boolean getCanDeleteHome() {
@@ -19,4 +19,5 @@ public class Config {
     public Integer getMaxCatsAtHome() {
         return maxCatsAtHome;
     }
+
 }
