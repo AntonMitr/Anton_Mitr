@@ -1,8 +1,6 @@
-package task13;
+package com.cat.home;
 
-import task13.UI.MenuController;
-
-public class AnimalBase2 {
+public class AnimalBase {
 
     public static void main(String[] args) {
         MenuController menuController = new MenuController();

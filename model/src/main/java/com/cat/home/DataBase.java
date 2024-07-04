@@ -1,4 +1,4 @@
-package task13.model;
+package com.cat.home;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +9,8 @@ public class DataBase implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
-    private static final String LINK = "src/task13/resources/cats.bin";
+
+    private static final String LINK = "resources/cats.bin";
     private static List<Cat> catList = new ArrayList<>();
     private static HashSet<String> homeList = new HashSet<>();
     private static DataBase dataBase;

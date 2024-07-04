@@ -1,4 +1,4 @@
-package task13.model;
+package com.cat.home;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -44,5 +44,10 @@ public class Cat implements Serializable {
 
         Cat cat = (Cat) obj;
         return ((name.equals(cat.getName())) && (home.equals(cat.getHome())));
+    }
+
+    @Override
+    public int hashCode(){
+        return name.hashCode() + home.hashCode();
     }
 }
