@@ -10,7 +10,7 @@ public class DataBase implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    private static final String LINK = "resources/cats.bin";
+    private static final String LINK = "starter/resources/cats.bin";
     private static List<Cat> catList = new ArrayList<>();
     private static HashSet<String> homeList = new HashSet<>();
     private static DataBase dataBase;
